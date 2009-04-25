@@ -1,5 +1,5 @@
-Warden::Manager.serialize_into_session{|user| p user;p user.id;user.id }
-Warden::Manager.serialize_from_session{|id| id.nil? ? nil : User.get(id) }
+Warden::Manager.serialize_into_session{|user| p "----------------";p user;p user.id; user.nil? ? nil : user.id }
+Warden::Manager.serialize_from_session{|id| p "==============#{id}"; id.nil? ? nil : User.get(id) }
 
 Warden::Strategies.add(:password) do
   def valid?

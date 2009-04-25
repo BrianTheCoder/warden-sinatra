@@ -55,7 +55,6 @@ class User < CouchRest::ExtendedDocument
   end
 
   def self.authenticate(login, password)
-    # login_param = Merb::Authentication::Strategies::Basic::Base.login_param
     @u = self.by_email(:key => login).first
     @u && @u.authenticated?(password) ? @u : nil
   end 

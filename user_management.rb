@@ -22,7 +22,7 @@ class UserManagement < Sinatra::Default
   
   post '/login/?' do
     if env['warden'].authenticated?(:password)
-      redirect '/'
+      redirect "/user/#{env['warden'].user}"
     else
       view :login
     end
@@ -30,15 +30,13 @@ class UserManagement < Sinatra::Default
   
   get '/logout/?' do
     env['warden'].logout
-    p "warden"
-    p env['warden'].inspect
-    redirect '/'
+    redirect '/login'
   end
   
   post '/register/?' do
     @user = User.new(params[:user])
     if @user.save
-      redirect '/upgrade'
+      redirect "/user/#{@user.handle}"
     else
       view :new
     end
