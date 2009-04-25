@@ -1,0 +1,96 @@
+body {
+	background:url(/images/bg-body.png) top left repeat-x #C16A03;
+	padding:0em 0em 0em;
+	color:##333333;
+}
+
+div.scroll-h {
+	overflow:auto;
+}
+
+div.container {
+	padding:.25em 20px 1em;
+	margin-top:0em;
+	background:url(/images/bg-container.png) top left repeat-y #f8f8f7;
+}
+
+div.header .container {
+	padding-top:2em;
+}
+
+div.header h1 {
+	background:url(/images/logo-obc-hd.png) top left no-repeat;
+	height:80px;
+}
+
+div.header h1 span {
+	visibility:hidden;
+}
+
+div.colborder {
+    border-color:transparent;
+    background:url(/images/bg-sidebar-seperator.png) top right repeat-y;
+}
+
+a, a:visited, a:active {
+	color:#C16A03;
+}
+
+hr {
+	background:url(/images/hr.png) top left repeat-x;
+	border-color:transparent;
+}
+
+hr.space {
+	background:transparent;
+}
+
+.left {
+	float:left;
+}
+
+img.left {
+	padding-right:10px;
+}
+
+.right {
+	float:right;
+}
+
+img.right {
+	padding-left:10px;
+}
+
+.box {
+	background:#F0F0E4;
+	border:1px solid #E2E2D0;
+}
+
+button:hover, a.button:hover{
+  background-color:#ffeede;
+  border:1px solid #f0d8c2;
+  color:#C16A03;
+}
+a.button:active{
+  background-color:#6299c5;
+  border:1px solid #6299c5;
+  color:#C16A03;
+}
+
+label {
+  display: block;
+}
+
+.vnav .button {
+  width:100%;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.odd {
+  background:#efefef;
+}
+
+thead th {
+	background:#C16A03;
+}

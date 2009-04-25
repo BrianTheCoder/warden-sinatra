@@ -1,0 +1,24 @@
+<div class="span-24">
+  <div class="span-15 colborder">
+    <h2>Register</h2>
+    <%= fake_paragraph %>
+    <%= fake_paragraph %>
+    <form method="post" action="/register" id="dummy">
+      <fieldset>
+        <p><%=text_field :name => "user[name]", :label => "Name", :class => "title", :value => @user.name %></p>
+        <p><%=text_field :name => "user[handle]", :label => "OrangeBloods Handle", :class => "title", :value => @user.handle %></p>
+        <p><%=text_field :name => "user[email]", :label => "Email", :class => "title", :value => @user.email %></p>
+        <p><%=text_field :name => "user[password]", :label => "Password", :class => "title" %></p>
+        <p><%=text_field :name => "user[password_confirmation]", :label => "Confirm Password", :class => "title" %></p>
+        <p><%=text_field :name => "user[birthdate]", :label => "Date of Birth", :class => "title", :value => @user.birthdate %></p>
+        <p><%=text_field :name => "user[region]", :label => "Region you live in", :class => "title", :value => @user.region %></p>
+        <p><%=text_field :name => "user[interests]", :label => "Other regions of interest", :class => "title", :value => @user.interests %></p>
+        <p><%=text_area :name => "user[company_description]", :label => "Company Description", :class => "title", :value => @user.company_description %></p>
+        <p><%=submit %><%=reset %></p>
+      </fieldset>
+    </form>
+  </div>
+  <div class="span-8 last">
+    <%= fake_paragraph %>
+  </div>
+</div>

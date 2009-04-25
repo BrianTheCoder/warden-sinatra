@@ -1,0 +1,15 @@
+<div class="span-24">
+  <div class="span-15 colborder">
+    <h2>Login</h2>
+    <form method="post" action="/login" id="dummy">
+      <fieldset>
+        <p><%=text_field :name => "email", :label => "Email", :class => "title", :value => params[:email] %></p>
+        <p><%=password_field :name => "password", :label => "Password", :class => "title" %></p>
+        <p><%=submit "Login" %></p>
+      </fieldset>
+    </form>
+  </div>
+  <div class="span-8 last">
+    <%= fake_paragraph %>
+  </div>
+</div>

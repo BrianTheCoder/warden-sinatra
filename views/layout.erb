@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>OrangeBloods Connection</title>
+  <!-- Framework CSS -->
+  <%= css_link :screen, :media => "screen, projection" %>
+  <%= css_link :print, :media => "print" %>
+  <!--[if IE]><%= css_link :ie, :media => "screen, projection" %><![endif]-->
+  <!-- Import fancy-type plugin. -->  
+  <%= css_link "plugins/fancy-type/screen", :media => "screen, projection" %>
+  <%= css_link "plugins/buttons/screen", :media => "screen, projection" %>
+  <%= css_link :custom, :media => "screen, projection" %>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="span-24">
+        <div class="span-16">
+          <h1><span>OrangeBloods Connection</span></h1>
+        </div>
+        <div class="span-8 last">
+          <p>
+            <a href="/login/">Login</a> | <a href="/register/">Register</a> | <a href="/listing/new">New Listing</a> | <a href="/partner/new">New Partner</a>
+          </p>
+          <p class="quiet">
+            <a href="/about/">About</a> |
+            <a href="/contact/">Contact Us</a> |
+            <a href="/faq/">FAQ</a>
+            <a href="/logout">Logout</a>
+            <%= env['warden'].authenticated?(:password) %>
+          </p>
+        </div>
+        <hr class="bottom "/>
+      </div>
+      <div class="span-24">
+        <p class="large">
+          <a href="/" class="button">Home</a>
+          <a href="/listings/" class="button">Listings</a>
+          <a href="/partners/" class="button">Partners</a>
+          <a href="/events/" class="button">Events Calendar</a>
+          <a href="/jobs/" class="button">Job Board</a>
+          <a href="/links/" class="button">Longhorn Links</a>
+          <a href="/merch/" class="button">OrangeBloods Merchandise</a>
+        </p>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <hr />
+      <p>
+        <a href="/about/">About</a> |
+        <a href="/contact/">Contact Us</a> |
+        <a href="/faq/">FAQ</a>
+      </p>
+    </div>
+  </div>
+  <%= js_link "jquery" %>
+  <%= js_link "jquery.validate" %>
+  <%= js_link "jquery.ui" %>
+  <%= js_link "date" %>
+  <%= js_link "main" %>
+</body>
+</html>
